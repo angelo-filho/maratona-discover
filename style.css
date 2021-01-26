@@ -1,0 +1,261 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/* Global */
+:root {
+  --dark-blue: #363f5f;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: #f0f2f5;
+}
+
+.container {
+  width: min(90vw, 800px);
+  margin: auto;
+}
+
+/* Header */
+header {
+  background-color: #2d4a22;
+  padding: 1rem 0 10rem;
+  text-align: center;
+}
+
+#logo {
+  color: #fff;
+  font-weight: 400;
+}
+
+#logo span {
+  color: #12a454;
+  font-weight: 600;
+}
+
+#logo span.dollar {
+  font-size: 1.5rem;
+}
+
+/* Balance */
+#balance {
+  margin-top: -7rem;
+  display: flex;
+  justify-content: center;
+}
+
+#balance h2 {
+  color: #fff;
+  margin-top: 0;
+}
+
+/* Cards */
+.card {
+  background-color: #fff;
+  padding: 1.5rem 2rem;
+  border-radius: 0.25rem;
+
+  flex: 1 0;
+  color: var(--dark-blue);
+}
+
+.card .card-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card.output {
+  margin: 0 1rem;
+}
+
+.card.total {
+  background-color: #49aa26;
+  color: #fff;
+}
+
+.card h3 {
+  font-weight: 400;
+  font-size: 1rem;
+}
+
+.card p {
+  font-size: 2rem;
+  line-height: 3rem;
+  margin-top: 1rem;
+}
+
+/* Transaction button */
+.transaction-btn {
+  margin: 2rem 0 0.65rem 0;
+}
+.transaction-btn a {
+  color: #12a454;
+  cursor: pointer;
+}
+
+#transaction a:hover {
+  color: #49aa26;
+}
+
+/* Table */
+#data-table {
+  width: 100%;
+  border-spacing: 0 0.5rem;
+  color: #969cb3;
+}
+
+table thead tr th:first-child,
+table tbody tr td:first-child {
+  border-radius: 0.25rem 0 0 0.25rem;
+}
+
+table thead th {
+  background-color: #fff;
+
+  font-weight: 400;
+  padding: 0.875rem 2rem;
+
+  text-align: left;
+}
+
+table tbody tr {
+  opacity: 0.7;
+}
+
+table tbody tr:hover {
+  opacity: 1;
+}
+
+table tbody td {
+  background-color: #fff;
+
+  padding: 1rem 2rem;
+}
+
+td.description {
+  color: var(--dark-blue);
+}
+
+td.income {
+  color: #12a454;
+}
+
+td.expense {
+  color: #e92929;
+}
+
+td.remove img {
+  position: relative;
+  top: 3px;
+  cursor: pointer;
+}
+
+/* Add transaction */
+.hidden {
+  display: none;
+}
+
+#bg-add-transaction {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  overflow-y: auto;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Add transaction form */
+.add-transaction-form {
+  padding: 1.65rem 1.625rem;
+  width: 500px;
+  background-color: #f0f2f5;
+}
+
+.add-transaction-form h3 {
+  font-weight: 500;
+  font-size: 1;
+  color: var(--dark-blue);
+}
+
+.input-box input,
+.btns-box {
+  margin-top: 0.75rem;
+  width: 100%;
+}
+
+.input-box {
+  width: 100%;
+}
+
+.input-box input {
+  outline: none;
+  border: none;
+
+  padding: 0.65rem;
+  font-weight: 500;
+}
+
+.input-box p {
+  font-size: 0.625rem;
+  padding-top: 0.125rem;
+  color: #68686d;
+}
+
+.btns-box {
+  display: flex;
+  justify-content: space-between;
+}
+
+.btns-box button {
+  outline: none;
+  border: none;
+  padding: 0.625rem 5rem;
+  background: none;
+  cursor: pointer;
+  font-weight: 500;
+  opacity: 0.8;
+}
+
+.btns-box button:hover {
+  opacity: 1;
+}
+
+.btns-box .cancel {
+  border: 3px solid #e92929;
+  color: #e92929;
+}
+
+.btns-box .save {
+  color: #fff;
+  background-color: #49aa26;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding-top: 2rem;
+  color: var(--dark-blue);
+  opacity: 0.6;
+}
+
+@media screen and (max-width: 855px) {
+  #balance {
+    flex-direction: column;
+  }
+
+  .card.output {
+    margin: 1rem 0;
+  }
+}
